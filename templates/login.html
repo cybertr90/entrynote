@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    {% from "_formhelpers.html" import render_field %}
+    <form method="post">
+        {{render_field(form.username)}}
+        {{render_field(form.password)}}
+       
+        <input type="submit" value="Login">
+    </form>
+    {% if form.errors%}
+    {% for error in form.errors %}
+    <ul>
+        <li>{{error}}</li>
+    </ul>
+    {% endfor%}
+    {% endif %}
+    <br>
+    <a href="{{url_for('register')}}">Haven't your account ? Click to register.</a>
+    <br>
+
+    
+</body>
+</html>

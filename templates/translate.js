@@ -1,0 +1,3 @@
+$.ajax(document){
+    document.querySelector('')
+}

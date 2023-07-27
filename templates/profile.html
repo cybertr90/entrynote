@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html profile="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <div class="container">
+        
+    </head>
+    <body>
+        <h1>Welcome, {{username}}</h1>
+
+        <h2>{{'Hello world'}}</h2>
+        <form method="post">
+            <div class="note">
+                {{noteform.note.label}} {{noteform.note}}
+            </div>
+            <input type="submit" value="Apply note">
+        </form>
+        <div class="entered_notes">
+            <h1>Recently Notes</h1>
+            {% for i in note %}
+                <ul>
+                    <li>{{i.note}}</li>
+                </ul>
+            {% endfor %}
+            </div>
+
+    </div>
+        
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .note {
+            height: 300px;
+            width: 300px;
+            overflow: hidden;
+            place-content: 'Enter a note';
+        }
+        .entered_notes {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+        }
+    </style>
+    <style>
+        .translate{
+            margin-top: 100px;
+        }
+    </style>
+</body>
+</html>
+
+</script>
